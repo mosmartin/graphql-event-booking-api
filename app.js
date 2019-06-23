@@ -26,7 +26,16 @@ app.use(
             mutation: RootMutation
         }
     `),
-    rootValue: {},
+    rootValue: {
+      events: () => {
+        return ["Cooking", "GraphQL Conf", "Coding"];
+      },
+
+      createEvents: args => {
+        const eventName = args.name;
+        return eventName;
+      }
+    },
     graphiql: true
   })
 );
