@@ -31,7 +31,7 @@ app.use(
         return ["Cooking", "GraphQL Conf", "Coding"];
       },
 
-      createEvents: args => {
+      createEvent: args => {
         const eventName = args.name;
         return eventName;
       }
